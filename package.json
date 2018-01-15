@@ -1,0 +1,25 @@
+{
+  "name": "@tphummel/streak",
+  "version": "1.0.0",
+  "description": "gather streaks from an ordered json array on stdin",
+  "main": "index.js",
+  "bin": {
+    "streak": "./cli.js"
+  },
+  "dependencies": {
+    "get-stdin": "5.0.1",
+    "minimist": "1.2.0"
+  },
+  "devDependencies": {
+    "pkg": "latest",
+    "standard": "latest",
+    "tap": "latest"
+  },
+  "scripts": {
+    "test": "standard && tap test.js --100 --coverage-report=text-summary",
+    "fix": "standard --fix",
+    "release": "pkg ."
+  },
+  "author": "Tom Hummel <tphummel@gmail.com",
+  "license": "MIT"
+}
