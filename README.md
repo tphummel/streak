@@ -1,5 +1,7 @@
 # streak
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tphummel/streak.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/tphummel/streak.svg?branch=master)](https://travis-ci.org/tphummel/streak)
 
 gather streaks from an ordered, contiguous json array on stdin. results are printed in json to stdout.
