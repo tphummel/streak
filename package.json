@@ -7,7 +7,7 @@
     "streak": "./cli.js"
   },
   "dependencies": {
-    "get-stdin": "5.0.1",
+    "get-stdin": "6.0.0",
     "minimist": "1.2.0"
   },
   "devDependencies": {
