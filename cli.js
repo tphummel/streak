@@ -18,8 +18,7 @@ const argv = minimist(process.argv, {
   },
   default: {
     label: 0,
-    column: 1,
-    min: 1
+    column: 1
   }
 })
 
