@@ -1,6 +1,6 @@
 {
   "name": "@tphummel/streak",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gather streaks from an ordered json array on stdin",
   "main": "index.js",
   "bin": {
