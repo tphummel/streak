@@ -1,5 +1,6 @@
 'use strict'
 
+const cp = require('child_process')
 const tap = require('tap')
 const lib = require('./index.js')
 
@@ -140,8 +141,6 @@ tap.test(function rowSatisfiesCriteriaFalse (t) {
   t.end()
 })
 
-const cp = require('child_process')
-
 tap.test(function cliWithMax (t) {
   const inputData = JSON.stringify([
     ['2017-01-01', 3],
@@ -197,7 +196,7 @@ tap.test(function cliVersion (t) {
   })
 })
 
-tap.test(function cliVersion (t) {
+tap.test(function cliBadData (t) {
   const cmd = `echo -n '[a1]' | ./cli.js`
 
   cp.exec(cmd, {
