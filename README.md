@@ -45,3 +45,29 @@ streak --help
 ### related work
 - [Find Streaks in Daily Data with Sparse/Missing Days](https://gist.github.com/tphummel/0045124009192f59dcd4c90df7f9eec6)
 - [MySQL Stored Procedure for Streaks](https://github.com/tphummel/tetris-report/blob/master/PyTom/Data/procs/player_perf_streaks.sql)
+
+### release
+
+```
+git fetch --all
+git checkout master
+git pull
+npm test
+npm version (major|minor|patch)
+git push && git push --tags
+npm publish
+
+wget https://github.com/tphummel/streak/archive/v1.0.1.tar.gz
+openssl sha256 < v1.0.1.tar.gz
+```
+
+Open PR to [homebrew tap](https://github.com/tphummel/homebrew-util) with updated version and hash.
+
+```
+npm run release
+tar -zcvf streak-v1.0.1-linux64.tar.gz streak-linux
+tar -zcvf streak-v1.0.1-osx64.tar.gz streak-macos
+tar -zcvf streak-v1.0.1-win64.exe.tar.gz streak-win.exe
+```
+
+Upload tars to the github release
