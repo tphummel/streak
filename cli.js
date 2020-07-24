@@ -36,7 +36,7 @@ getStdin().then(str => {
   try {
     var input = JSON.parse(str)
   } catch (e) {
-    console.log(`stdin was not valid valid json. failed to parse`)
+    console.log('stdin was not valid valid json. failed to parse')
     process.exit(1)
   }
 

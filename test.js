@@ -127,7 +127,7 @@ tap.test(function rowSatisfiesCriteriaTrue (t) {
     minValue: 5,
     column: 1
   }
-  t.ok(lib.rowSatisfiesCriteria({row, criteria}))
+  t.ok(lib.rowSatisfiesCriteria({ row, criteria }))
   t.end()
 })
 
@@ -137,7 +137,7 @@ tap.test(function rowSatisfiesCriteriaFalse (t) {
     minValue: 5,
     column: 1
   }
-  t.notOk(lib.rowSatisfiesCriteria({row, criteria}))
+  t.notOk(lib.rowSatisfiesCriteria({ row, criteria }))
   t.end()
 })
 
@@ -173,7 +173,7 @@ tap.test(function cliWithMax (t) {
 })
 
 tap.test(function cliHelp (t) {
-  const cmd = `./cli.js --help`
+  const cmd = './cli.js --help'
 
   cp.exec(cmd, {
     shell: 'bash'
@@ -185,7 +185,7 @@ tap.test(function cliHelp (t) {
 })
 
 tap.test(function cliVersion (t) {
-  const cmd = `./cli.js --version`
+  const cmd = './cli.js --version'
 
   cp.exec(cmd, {
     shell: 'bash'
@@ -197,7 +197,7 @@ tap.test(function cliVersion (t) {
 })
 
 tap.test(function cliBadData (t) {
-  const cmd = `echo -n '[a1]' | ./cli.js`
+  const cmd = 'echo -n \'[a1]\' | ./cli.js'
 
   cp.exec(cmd, {
     shell: 'bash'

@@ -1,6 +1,6 @@
 'use strict'
 
-function rowSatisfiesCriteria ({row, criteria}) {
+function rowSatisfiesCriteria ({ row, criteria }) {
   if (criteria && criteria.minValue != null) {
     if (row[criteria.column] < criteria.minValue) {
       return false
@@ -16,14 +16,14 @@ function rowSatisfiesCriteria ({row, criteria}) {
   return true
 }
 
-function getStreaks ({data, displayColumn, criteria}) {
-  let streaks = []
+function getStreaks ({ data, displayColumn, criteria }) {
+  const streaks = []
   let active = []
   const minStreakLength = 2
 
   data.forEach(row => {
-    let streakInProgress = active.length > 0
-    let criteriaSatisfied = rowSatisfiesCriteria({row, criteria})
+    const streakInProgress = active.length > 0
+    const criteriaSatisfied = rowSatisfiesCriteria({ row, criteria })
 
     if (streakInProgress) {
       if (criteriaSatisfied) {
@@ -37,7 +37,7 @@ function getStreaks ({data, displayColumn, criteria}) {
     }
   })
 
-  let output = streaks.map(raw => {
+  const output = streaks.map(raw => {
     return {
       start: raw[0][displayColumn],
       end: raw[raw.length - 1][displayColumn],
